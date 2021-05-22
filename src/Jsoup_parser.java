@@ -14,6 +14,7 @@ public class Jsoup_parser {
         Document doc = null;
         Elements body_news = null;
         Elements time_news = null;
+        Elements link_news = null;
 
         try {
             doc = Jsoup.connect("https://" + city + ".mk.ru/news/")
@@ -27,13 +28,15 @@ public class Jsoup_parser {
             System.out.println("Некорректный запрос");
             return;
         }
-        System.out.println("Последние 10 новостей за сегодня:");
+        System.out.println("Последние новости за сегодня:");
         if(doc != null) {
-            for(Integer i = 1; i != 11; i++)
+            for(Integer i = 1; i != 25; i++)
             {
                 body_news = doc.select("body > div.wraper > div.wraper__content > div > div.article-grid__content.news-listing > section:nth-child(4) > ul > li:nth-child(" + i.toString() + ") > a > h3");
                 time_news = doc.select("body > div.wraper > div.wraper__content > div > div.article-grid__content.news-listing > section:nth-child(4) > ul > li:nth-child(" + i.toString() + ") > a > span");
-                System.out.println(i + ") " + time_news.text() + " " + body_news.text());
+                link_news = doc.select("body > div.wraper > div.wraper__content > div > div.article-grid__content.news-listing > section:nth-child(4) > ul > li:nth-child(" + i.toString() + ") > a");
+                if(!body_news.isEmpty() && !time_news.isEmpty())
+                    System.out.printf("%d) %s: %s\nLink: %s\n\n", i, time_news.text(), body_news.text(), link_news.attr("href"));
             }
         }
     }
