@@ -1,4 +1,4 @@
-![Screen](https://cdn.javarush.ru/images/article/acb0dda6-fe7c-4c4a-b421-cc6d617bc46e/800.jpeg)
+![Screen](https://raw.githubusercontent.com/atomatoe/jsoupParse/master/screenshots/jsoup_logo.jpeg)
 ________________________________________________________________
 
 #### <p align=center> "Возможно, когда-нибудь вам будет необходимо получить информацию с какого-либо сайта либо HTML-документа в своем приложении, и я без лишних слов скажу, что использование библиотеки jsoup существенно упростит вашу задачу."</p> ####
@@ -20,6 +20,7 @@ ________________________________________________________________
 <p><img src="https://raw.githubusercontent.com/atomatoe/jsoupParse/master/screenshots/screen_1.png" alt="Ссылка"></p>
 <p><img src="https://raw.githubusercontent.com/atomatoe/jsoupParse/master/screenshots/screen_2.png" alt="Ссылка"></p>
 <p><img src="https://raw.githubusercontent.com/atomatoe/jsoupParse/master/screenshots/screen_3.png" alt="Ссылка"></p>
+<p><img src="https://raw.githubusercontent.com/atomatoe/jsoupParse/master/screenshots/screen_4.png" alt="Ссылка"></p>
 ________________________________________________________________
 
 </details>
