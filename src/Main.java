@@ -18,6 +18,7 @@ public class Main {
                 answer = input.nextInt();
             } catch (InputMismatchException ex) {
                 input.nextLine(); // очищаем буфер, чтобы не ушел в бесконечный цикл
+                answer = 0;
             }
             if(answer == 1)
                 show_news();
@@ -33,7 +34,7 @@ public class Main {
     public static void show_news() {
         String answer = null;
 
-        System.out.println("Введите интересующий вас город (список тегов /tags):");
+        System.out.println("Введите интересующий вас город:");
         answer = input.next();
         parser.parse_city(answer);
     }
